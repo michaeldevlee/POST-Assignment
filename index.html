@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const string_object = {
+        string_to_cut : "iamyourlyftdriver"
+    }
+
+    const removeEveryThird = (str_obj) => {
+        const str_array = str_obj.string_to_cut.split("");
+        const divisions = Math.floor(str_array.length/3)
+        const third_letters = []
+
+        for (let i = 1; i < divisions+1; i++){
+            third_letters.push(str_array[(i*3)-1])
+        }
+        
+        const new_str_array = {
+            "return_string" : third_letters.join("")
+        }
+
+        console.log(new_str_array.return_string)
+        console.log(new_str_array)
+
+        return new_str_array
+    }
+
+    removeEveryThird(string_object)
+    </script>
+    
+    
+</body>
+</html>
